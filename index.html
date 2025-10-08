@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Devvanshi Villa</title>
-  <meta name="description" content="Hotel Devvanshi Villa offers luxurious rooms, modern amenities, and world-class hospitality in Varanasi. Book your stay now!" />
-  <meta name="keywords" content="Hotel Devvanshi Villa, hotel in Varanasi, luxury stay, rooms, suites, Varanasi accommodation" />
+  <title>Hotel Devvanshi Villa | Luxury Stay in Varanasi</title>
+  <meta name="description" content="Stay at Hotel Devvanshi Villa, Varanasi’s finest destination for luxury rooms, modern amenities, and warm hospitality. Book your stay now!" />
+  <meta name="keywords" content="Hotel Devvanshi Villa, best hotel Varanasi, luxury stay, family rooms, premium suites, hotel booking Varanasi" />
+  <meta name="author" content="Hotel Devvanshi Villa" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ Open Graph (OG) SEO -->
+  <meta property="og:title" content="Hotel Devvanshi Villa | Luxury Stay in Varanasi" />
+  <meta property="og:description" content="Enjoy a luxurious stay at Hotel Devvanshi Villa with premium rooms, suites, and exceptional hospitality in the heart of Varanasi." />
+  <meta property="og:image" content="roomnumber1.JPG" />
+  <meta property="og:url" content="https://hoteldevvanshivilla.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- ✅ Twitter SEO -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hotel Devvanshi Villa | Luxury Stay in Varanasi" />
+  <meta name="twitter:description" content="Experience comfort and elegance at Hotel Devvanshi Villa in Varanasi. Book your perfect stay today!" />
+  <meta name="twitter:image" content="roomnumber2.JPG" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header / Navbar -->
+  <!-- Header -->
   <header>
     <div class="logo">Hotel Devvanshi Villa</div>
     <div class="menu-toggle" aria-label="Toggle menu">☰</div>
@@ -24,14 +40,47 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <h1>Welcome to Hotel Devvanshi Villa</h1>
     <p>Your comfort, our priority</p>
     <a href="https://wa.me/919876543210" class="btn">Book Now</a>
   </section>
+<section id="booking" class="section booking-section">
+    <h2>Book Your Stay</h2>
+    <p>Enter your details below to reserve your room.</p>
 
-  <!-- About Hotel -->
+    <form id="bookingForm" class="booking-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required pattern="[0-9]{10}" maxlength="10">
+
+      <label for="date">Select Check-in Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <button type="submit" class="btn glow-btn">Book Now</button>
+    </form>
+  </section>
+
+  <script>
+    // WhatsApp Redirect on Form Submit
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = encodeURIComponent(document.getElementById('name').value);
+      const phone = encodeURIComponent(document.getElementById('phone').value);
+      const date = encodeURIComponent(document.getElementById('date').value);
+
+      const message = `Hello, I am ${name}. I would like to book a room. My contact number is ${phone} and my check-in date is ${date}.`;
+      const whatsappURL = `https://wa.me/919876543210?text=${message}`;
+
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+  <!-- About -->
   <section id="about" class="section">
     <h2>About Hotel</h2>
     <p>Hotel Devvanshi Villa offers luxury rooms, modern amenities, and exceptional hospitality to make your stay unforgettable.</p>
@@ -47,19 +96,7 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Free Wi-Fi</li>
-      <li>Restaurant</li>
-      <li>Care Taker</li>
-      <li>24/7 Room Service</li>
-      <li>Laundry Service</li>
-    </ul>
-  </section>
-
-  <!-- Rooms Section -->
+  <!-- Rooms -->
   <section id="rooms" class="section">
     <h2 class="section-title">Our Rooms</h2>
     <div class="room-cards">
@@ -71,7 +108,7 @@
         <div class="room-content">
           <h3>Deluxe Room</h3>
           <p>Spacious and modern with all the comforts for a relaxing stay.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Deluxe%20Room" class="btn">Book Now</a>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Deluxe%20Room" class="btn glow-btn">Book Now</a>
         </div>
       </div>
 
@@ -83,7 +120,7 @@
         <div class="room-content">
           <h3>Premium Suite</h3>
           <p>Luxury suite with elegant design and a private balcony view.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Premium%20Suite" class="btn">Book Now</a>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Premium%20Suite" class="btn glow-btn">Book Now</a>
         </div>
       </div>
 
@@ -95,7 +132,7 @@
         <div class="room-content">
           <h3>Family Room</h3>
           <p>Perfect for families with multiple beds and cozy interiors.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Family%20Room" class="btn">Book Now</a>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Family%20Room" class="btn glow-btn">Book Now</a>
         </div>
       </div>
 
@@ -107,7 +144,7 @@
         <div class="room-content">
           <h3>Executive Room</h3>
           <p>Ideal for business travelers with a smart work-friendly setup.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Executive%20Room" class="btn">Book Now</a>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Executive%20Room" class="btn glow-btn">Book Now</a>
         </div>
       </div>
 
@@ -119,7 +156,7 @@
         <div class="room-content">
           <h3>Villa Suite</h3>
           <p>Exclusive suite with premium interiors and a private lounge.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Villa%20Suite" class="btn">Book Now</a>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Villa%20Suite" class="btn glow-btn">Book Now</a>
         </div>
       </div>
 
@@ -131,26 +168,24 @@
         <div class="room-content">
           <h3>Luxury Suite</h3>
           <p>Top-class suite with breathtaking views and royal comfort.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Luxury%20Suite" class="btn">Book Now</a>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20Luxury%20Suite" class="btn glow-btn">Book Now</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="section">
     <h2>Contact Us</h2>
     <p><strong>Address:</strong> Dr. B, D. 61/38 E 7, Sigra-Siddhigiri Bagh Rd, near Hanuman Mandir, Maulvibagh, Jahumandi, Varanasi, Uttar Pradesh 221001</p>
     <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
     <p><strong>Email:</strong> <a href="mailto:bookdevvanshivilla@gmail.com">bookdevvanshivilla@gmail.com</a></p>
-    <a href="https://wa.me/919876543210" class="btn">Chat on WhatsApp</a>
-
+    <a href="https://wa.me/919876543210" class="btn glow-btn">Chat on WhatsApp</a>
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.987107010243!2d82.987!3d25.317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2f961e41d885%3A0x9127af0e286e830d!2sHotel%20Devvanshi%20Villa!5e0!3m2!1sen!2sin!4v1759473343408!5m2!1sen!2sin" 
         allowfullscreen 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
+        loading="lazy">
       </iframe>
     </div>
   </section>
@@ -197,12 +232,6 @@
     </div>
   </section>
 
-  <!-- About Us -->
-  <section id="about-us" class="section">
-    <h2>About Us</h2>
-    <p>Hotel Devvanshi Villa is committed to offering world-class hospitality with a personal touch. Our goal is to provide comfort, luxury, and memorable experiences for all our guests.</p>
-  </section>
-
   <!-- Footer -->
   <footer>
     <p>© 2025 Hotel Devvanshi Villa | All Rights Reserved</p>
@@ -211,12 +240,10 @@
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/919876543210" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
 
-  <!-- Mobile Nav JS -->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('nav a');
-
     toggle.addEventListener('click', () => nav.classList.toggle('active'));
     navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
   </script>
