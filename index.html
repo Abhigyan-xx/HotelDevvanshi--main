@@ -4,45 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Devvanshi Villa | Luxury Stay in Varanasi</title>
-  <meta name="description" content="Stay at Hotel Devvanshi Villa, Varanasi’s finest destination for luxury rooms, modern amenities, and warm hospitality. Book your stay now!" />
-  <meta name="keywords" content="Hotel Devvanshi Villa, best hotel Varanasi, luxury stay, family rooms, premium suites, hotel booking Varanasi" />
+  <meta name="description" content="Diwali offers at Hotel Devvanshi Villa Varanasi – up to 30% off! Book your festive stay now!" />
+  <meta name="keywords" content="Hotel Devvanshi Villa, best hotel Varanasi, luxury stay, family rooms, premium suites, hotel booking Varanasi, Diwali offers" />
   <meta name="author" content="Hotel Devvanshi Villa" />
   <meta name="robots" content="index, follow" />
 
-  <!-- ✅ Open Graph (OG) SEO -->
+  <!-- Open Graph (OG) SEO -->
   <meta property="og:title" content="Hotel Devvanshi Villa | Luxury Stay in Varanasi" />
-  <meta property="og:description" content="Enjoy a luxurious stay at Hotel Devvanshi Villa with premium rooms, suites, and exceptional hospitality in the heart of Varanasi." />
-  <meta property="og:image" content="roomnumber1.JPG" />
+  <meta property="og:description" content="Celebrate Diwali with up to 30% off at Hotel Devvanshi Villa. Enjoy premium rooms and festive experiences in Varanasi." />
+  <meta property="og:image" content="diwali-offer-banner.jpg" />
   <meta property="og:url" content="https://hoteldevvanshivilla.com/" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Twitter SEO -->
+  <!-- Twitter SEO -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hotel Devvanshi Villa | Luxury Stay in Varanasi" />
-  <meta name="twitter:description" content="Experience comfort and elegance at Hotel Devvanshi Villa in Varanasi. Book your perfect stay today!" />
-  <meta name="twitter:image" content="roomnumber2.JPG" />
+  <meta name="twitter:title" content="Hotel Devvanshi Villa | Diwali Offers in Varanasi" />
+  <meta name="twitter:description" content="Experience comfort and festive joy at Hotel Devvanshi Villa. Book now for Diwali specials!" />
+  <meta name="twitter:image" content="diwali-family.jpg" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Header -->
-<header>
-  <div class="logo">
-    <span class="hotel-name">Hotel</span>
-    <span class="highlight">Devvanshi Villa</span>
-  </div>
-  <div class="menu-toggle" aria-label="Toggle menu">☰</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#amenities">Amenities</a>
-    <a href="#rooms">Rooms</a>
-    <a href="#contact">Contact</a>
-    <a href="#touristAttraction">Tourist Attractions</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo">
+      <span class="hotel-name">Hotel</span>
+      <span class="highlight">Devvanshi Villa</span>
+    </div>
+    <div class="menu-toggle" aria-label="Toggle menu">☰</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#offers">Offers</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <script>
+    // Menu Toggle for Mobile
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active');
+    });
+
+    // Close nav when any link is clicked
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('nav').classList.remove('active');
+      });
+    });
+  </script>
 
   <!-- Hero -->
   <section class="hero">
@@ -50,20 +64,18 @@
     <p>Your comfort, our priority</p>
     <a href="https://wa.me/916392986404" class="btn">Book Now</a>
   </section>
-<section id="booking" class="section booking-section">
+
+  <!-- Booking -->
+  <section id="booking" class="section booking-section">
     <h2>Book Your Stay</h2>
     <p>Enter your details below to reserve your room.</p>
-
     <form id="bookingForm" class="booking-form">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
       <label for="phone">Mobile Number</label>
       <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required pattern="[0-9]{10}" maxlength="12">
-
       <label for="date">Select Check-in Date</label>
       <input type="date" id="date" name="date" required>
-
       <button type="submit" class="btn glow-btn">Book Now</button>
     </form>
   </section>
@@ -72,289 +84,326 @@
     // WhatsApp Redirect on Form Submit
     document.getElementById('bookingForm').addEventListener('submit', function(e) {
       e.preventDefault();
-
       const name = encodeURIComponent(document.getElementById('name').value);
       const phone = encodeURIComponent(document.getElementById('phone').value);
       const date = encodeURIComponent(document.getElementById('date').value);
-
       const message = `Hello, I am ${name}. I would like to book a room. My contact number is ${phone} and my check-in date is ${date}.`;
       const whatsappURL = `https://wa.me/916392986404?text=${message}`;
-
       window.open(whatsappURL, '_blank');
     });
   </script>
 
+  <!-- Special Offers (Diwali & Dev Deepawali) -->
+  <section id="offers" class="section offers-section">
+    <h2>Diwali & Dev Deepawali Special Offers</h2>
+    <p class="section-intro">Celebrate the Festival of Lights at Hotel Devvanshi Villa, Varanasi! Immerse yourself in the spiritual glow of Diwali and witness the divine beauty of Dev Deepawali on the Ganges. ✨ Bookings now open — offers valid till 5th November 2025!</p>
+    <div class="offers-grid">
+
+      <!-- Offer 1: Diwali Delight Package -->
+      <div class="offer-card">
+        <div class="offer-image">
+          <img src="https://images.unsplash.com/photo-1720159016520-e2b5ccb8926e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diwali Lights at Ganges" loading="lazy">
+          <div class="offer-badge">Limited Time!</div>
+        </div>
+        <div class="offer-content">
+          <h3>🌸Diwali Delight Package</h3>
+          <p>Light up your stay with joy and tradition! Enjoy 25% OFF on all room bookings and experience a truly festive escape.</p>
+          <ul class="offer-features">
+            <li>Evening Ganga Aarti boat ride</li>
+            <li>Free railway Stations transfer for stays of 3 nights or more</li>
+            <li>Special Diwali dinner featuring authentic Banarasi delicacies</li>
+            <li>Valid for stays till Nov 5, 2025</li>
+          </ul>
+          <div class="price-box">
+            <span class="old-price">From ₹2,500</span>
+            <span class="new-price">From ₹1,999 / night</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Diwali%20offer" class="btn glow-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Offer 2: Family Diwali Escape -->
+      <div class="offer-card">
+        <div class="offer-image">
+          <img src="https://images.pexels.com/photos/11661801/pexels-photo-11661801.jpeg" alt="Family Diwali Celebration" loading="lazy">
+          <div class="offer-badge">Family Special</div>
+        </div>
+        <div class="offer-content">
+          <h3>🪔Family Diwali Escape</h3>
+          <p>A perfect festive retreat for families! Get 30% OFF on Family Rooms (Triple / Four Bed).</p>
+          <ul class="offer-features">
+            <li>Kids stay free</li>
+            <li>Rooftop fireworks viewing on Dev Deepawali</li>
+            <li>Festive breakfast and Diwali gifts for the whole family</li>
+            <li>Valid for stays till Nov 5, 2025</li>
+          </ul>
+          <div class="price-box">
+            <span class="old-price">From ₹3,000</span>
+            <span class="new-price">From ₹2,499 / night</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Diwali%20offer" class="btn glow-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <p class="offer-note">Offers subject to availability. Terms apply.</p>
+  </section>
+
   <!-- About -->
   <section id="about" class="section">
     <h2>About Hotel</h2>
-<p>Hotel Devvanshi Villa offers cozy rooms, modern amenities, and warm hospitality. Located in a great area, it’s just a short walk from the main temples and ghats, making it perfect for sightseeing and a comfortable stay in Banaras.</p>
-    </section>
+    <p>Hotel Devvanshi Villa offers cozy rooms, modern amenities, and warm hospitality. Located in a great area, it’s just a short walk from the main temples and ghats, making it perfect for sightseeing and a comfortable stay in Banaras.</p>
+  </section>
 
-
-
-<!-- Gallery -->
-<section id="gallery" class="section">
-  <h2>Gallery</h2>
-  <div class="carousel">
-    <div class="carousel-track">
-      <img src="roomnumber1.JPG" alt="Hotel Room 1" loading="lazy">
-      <img src="roomnumber2.JPG" alt="Hotel Room 2" loading="lazy">
-      <img src="roomnumber3.JPG" alt="Hotel Room 3" loading="lazy">
-      <img src="PremiumSuiteRoom.JPG" alt="Hotel Room 2" loading="lazy">
-      <img src="familyroom.JPG" alt="Hotel Room 2" loading="lazy">
-      <img src="roomnumber2.JPG" alt="Hotel Room 2" loading="lazy">
-      <img src="roomnumber2.JPG" alt="Hotel Room 2" loading="lazy">
-
-    </div>
-    <button class="nav prev">&#10094;</button>
-    <button class="nav next">&#10095;</button>
-  </div>
-</section>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-  
-  let index = 0;
-  let interval;
-
-  // Duplicate slides for infinite loop
-  slides.forEach(slide => {
-    const clone = slide.cloneNode(true);
-    track.appendChild(clone);
-  });
-
-  const moveSlides = () => {
-    index++;
-    const slideWidth = slides[0].getBoundingClientRect().width + 20;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-    if (index >= slides.length) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 0;
-        track.style.transform = `translateX(0px)`;
-        setTimeout(() => track.style.transition = "transform 1s ease-in-out", 50);
-      }, 1000);
-    }
-  };
-
-  const startAutoSlide = () => interval = setInterval(moveSlides, 3000);
-  const stopAutoSlide = () => clearInterval(interval);
-
-  nextBtn.addEventListener("click", () => {
-    moveSlides();
-    stopAutoSlide();
-    startAutoSlide();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    const slideWidth = slides[0].getBoundingClientRect().width + 20;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-    stopAutoSlide();
-    startAutoSlide();
-  });
-
-  // Swipe support
-  let startX = 0;
-  track.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
-  track.addEventListener("touchend", (e) => {
-    const endX = e.changedTouches[0].clientX;
-    if (endX < startX - 50) nextBtn.click();
-    if (endX > startX + 50) prevBtn.click();
-  });
-
-  startAutoSlide();
-});
-</script>
-
-
-    <!-- Amenities & Facilities -->
- <!-- Amenities & Facilities -->
-<section id="amenities" class="section amenities-section">
-  <h2>Amenities & Facilities</h2>
-
-  <div class="amenities-grid">
-    <div class="amenity-card">
-      <h3>🚗 Parking</h3>
-      <p>On-site parking available for guests.</p>
-    </div>
-
-    <div class="amenity-card">
-      <h3>🚌 Transfer</h3>
-      <p>Paid airport shuttle for hassle-free travel.</p>
-    </div>
-
-    <div class="amenity-card">
-      <h3>💼 For Business</h3>
-      <p>Fax and photocopying services available.</p>
-    </div>
-    <div class="amenity-card">
-      <h3>🛁 Bathroom</h3>
-      <p>Complimentary toiletries for your convenience.</p>
-    </div>
-
-    <div class="amenity-card">
-      <h3>📺 Media</h3>
-      <p>Flat-screen TV and AM/FM alarm clock in every room.</p>
-    </div>
-
-    <div class="amenity-card">
-      <h3>🧾 Services</h3>
-      <p>24-hour reception, room service, laundry, and more.</p>
-    </div>
-
-    <div class="amenity-card">
-      <h3>🏡 Room Features</h3>
-      <p>Air conditioning, heating, and soundproof comfort.</p>
-    </div>
-
-    <div class="amenity-card">
-      <h3>🔥 General Facilities</h3>
-      <p>Allergy-free rooms, fireplace, and fire extinguishers.</p>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="rooms" class="section">
-  <h2 class="section-title">Our Rooms</h2>
-  <div class="room-cards">
-
-    <!-- Room 1 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber1.JPG" alt="Standard Room">
-        <div class="rating">⭐⭐⭐⭐ <span>(128 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Standard Room</h3>
-        <p>Ideal for solo travelers or couples simple, cozy, and affordable</p>
-        <div class="price-box">
-          <span class="old-price">₹1,499</span>
-          <span class="new-price">₹1,349 / night</span>
-          <span class="discount">10% OFF</span>
+  <!-- Rooms -->
+  <section id="rooms" class="section">
+    <h2 class="section-title">Our Rooms</h2>
+    <p class="section-intro">Discover our range of comfortable and luxurious rooms designed to suit every traveler's needs. Each room is equipped with modern amenities for a memorable stay.</p>
+    <div class="room-cards">
+      <!-- Room 1 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber1.JPG" alt="Standard Room">
+          <div class="rating">⭐⭐⭐⭐ <span>(128 reviews)</span></div>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Standard%20Room" class="btn glow-btn">Book Now</a>
-      </div>
-    </div>
-
-    <!-- Room 2 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber2.JPG" alt="Standard Room">
-        <div class="rating">⭐⭐⭐⭐ <span>(110 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Standard Room</h3>
-        <p>Ideal for solo travelers or couples simple, cozy, and affordable</p>
-        <div class="price-box">
-          <span class="old-price">₹1,499</span>
-          <span class="new-price">₹1,349 / night</span>
-          <span class="discount">10% OFF</span>
+        <div class="room-content">
+          <h3>Standard Room</h3>
+          <p>Ideal for solo travelers or couples. Simple, cozy, and affordable with all essential comforts.</p>
+          <div class="price-box">
+            <span class="old-price">₹1,499</span>
+            <span class="new-price">₹1,349 / night</span>
+            <span class="discount">10% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Standard%20Room" class="btn glow-btn">Book Now</a>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Standard%20Room" class="btn glow-btn">Book Now</a>
       </div>
-    </div>
-
-    <!-- Room 3 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber1.JPG" alt="Deluxe Room">
-        <div class="rating">⭐⭐⭐⭐⭐ <span>(96 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Deluxe Room</h3>
-        <p>Perfect for couples who want extra space.</p>
-        <div class="price-box">
-          <span class="old-price">₹1,799</span>
-          <span class="new-price">₹1,619 / night</span>
-          <span class="discount">10% OFF</span>
+      <!-- Room 2 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber2.JPG" alt="Standard Room">
+          <div class="rating">⭐⭐⭐⭐ <span>(110 reviews)</span></div>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Deluxe%20Room" class="btn glow-btn">Book Now</a>
-      </div>
-    </div>
-
-    <!-- Room 4 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber1.JPG" alt="Deluxe Room">
-        <div class="rating">⭐⭐⭐⭐⭐ <span>(102 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Deluxe Room</h3>
-        <p>Perfect for couples who want extra space.</p>
-        <div class="price-box">
-          <span class="old-price">₹1,599</span>
-          <span class="new-price">₹1,439 / night</span>
-          <span class="discount">10% OFF</span>
+        <div class="room-content">
+          <h3>Standard Room</h3>
+          <p>Ideal for solo travelers or couples. Simple, cozy, and affordable with all essential comforts.</p>
+          <div class="price-box">
+            <span class="old-price">₹1,499</span>
+            <span class="new-price">₹1,349 / night</span>
+            <span class="discount">10% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Standard%20Room" class="btn glow-btn">Book Now</a>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Deluxe%20Room" class="btn glow-btn">Book Now</a>
       </div>
-    </div>
-
-    <!-- Room 5 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber1.JPG" alt="Triple Bed Room">
-        <div class="rating">⭐⭐⭐⭐ <span>(143 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Triple Bed Room</h3>
-        <p>Best suited for small families or friends traveling together.</p>
-        <div class="price-box">
-          <span class="old-price">₹1,999</span>
-          <span class="new-price">₹1,599 / night</span>
-          <span class="discount">20% OFF</span>
+      <!-- Room 3 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber1.JPG" alt="Deluxe Room">
+          <div class="rating">⭐⭐⭐⭐⭐ <span>(96 reviews)</span></div>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Triple%20Bed%20Room" class="btn glow-btn">Book Now</a>
-      </div>
-    </div>
-
-    <!-- Room 6 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber1.JPG" alt="Four Bed Room">
-        <div class="rating">⭐⭐⭐⭐ <span>(112 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Four Bed Room</h3>
-        <p>Ideal for larger families or groups of friends.</p>
-        <div class="price-box">
-          <span class="old-price">₹2,499</span>
-          <span class="new-price">₹1,999 / night</span>
-          <span class="discount">20% OFF</span>
+        <div class="room-content">
+          <h3>Deluxe Room</h3>
+          <p>Perfect for couples seeking extra space and luxury. Enjoy enhanced comfort and style.</p>
+          <div class="price-box">
+            <span class="old-price">₹1,799</span>
+            <span class="new-price">₹1,619 / night</span>
+            <span class="discount">10% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Deluxe%20Room" class="btn glow-btn">Book Now</a>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Four%20Bed%20Room" class="btn glow-btn">Book Now</a>
       </div>
-    </div>
-
-    <!-- Room 7 -->
-    <div class="room-card">
-      <div class="room-image">
-        <img src="roomnumber1.JPG" alt="Interconnected Room">
-        <div class="rating">⭐⭐⭐⭐⭐ <span>(174 reviews)</span></div>
-      </div>
-      <div class="room-content">
-        <h3>Interconnected Room</h3>
-        <p>Great for families or groups who want adjacent rooms with internal access to 2 rooms.</p>
-        <div class="price-box">
-          <span class="old-price">₹3,000</span>
-          <span class="new-price">₹2,400 / night</span>
-          <span class="discount">20% OFF</span>
+      <!-- Room 4 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber1.JPG" alt="Deluxe Room">
+          <div class="rating">⭐⭐⭐⭐⭐ <span>(102 reviews)</span></div>
         </div>
-        <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Interconnected%20Room" class="btn glow-btn">Book Now</a>
+        <div class="room-content">
+          <h3>Deluxe Room</h3>
+          <p>Perfect for couples seeking extra space and luxury. Enjoy enhanced comfort and style.</p>
+          <div class="price-box">
+            <span class="old-price">₹1,599</span>
+            <span class="new-price">₹1,439 / night</span>
+            <span class="discount">10% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Deluxe%20Room" class="btn glow-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Room 5 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber1.JPG" alt="Triple Bed Room">
+          <div class="rating">⭐⭐⭐⭐ <span>(143 reviews)</span></div>
+        </div>
+        <div class="room-content">
+          <h3>Triple Bed Room</h3>
+          <p>Best suited for small families or friends traveling together. Spacious and convenient.</p>
+          <div class="price-box">
+            <span class="old-price">₹1,999</span>
+            <span class="new-price">₹1,599 / night</span>
+            <span class="discount">20% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Triple%20Bed%20Room" class="btn glow-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Room 6 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber1.JPG" alt="Four Bed Room">
+          <div class="rating">⭐⭐⭐⭐ <span>(112 reviews)</span></div>
+        </div>
+        <div class="room-content">
+          <h3>Four Bed Room</h3>
+          <p>Ideal for larger families or groups of friends. Ample space for everyone.</p>
+          <div class="price-box">
+            <span class="old-price">₹2,499</span>
+            <span class="new-price">₹1,999 / night</span>
+            <span class="discount">20% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Four%20Bed%20Room" class="btn glow-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Room 7 -->
+      <div class="room-card">
+        <div class="room-image">
+          <img src="roomnumber1.JPG" alt="Interconnected Room">
+          <div class="rating">⭐⭐⭐⭐⭐ <span>(174 reviews)</span></div>
+        </div>
+        <div class="room-content">
+          <h3>Interconnected Room</h3>
+          <p>Great for families or groups wanting adjacent rooms with internal access (connects 2 rooms).</p>
+          <div class="price-box">
+            <span class="old-price">₹3,000</span>
+            <span class="new-price">₹2,400 / night</span>
+            <span class="discount">20% OFF</span>
+          </div>
+          <a href="https://wa.me/916392986404?text=I%20want%20to%20book%20Interconnected%20Room" class="btn glow-btn">Book Now</a>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Testimonials -->
+  <section id="testimonials" class="section testimonials-section">
+    <h2>Guest Reviews</h2>
+    <p class="section-intro">Hear from our happy guests who enjoyed their stay at Hotel Devvanshi Villa.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"The staff was incredibly warm, and the rooms were spotless. Perfect location near the ghats!"</p>
+        <h4>– Priya S.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"A wonderful experience! The deluxe room was spacious, and the service was top-notch."</p>
+        <h4>– Rajesh K.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Loved the proximity to Dashashwamedh Ghat. Highly recommend for a spiritual getaway."</p>
+        <h4>– Ananya M.</h4>
+      </div>
+    </div>
+  </section>
 
+  <!-- Amenities -->
+  <section id="amenities" class="section amenities-section">
+    <h2>Amenities & Facilities</h2>
+    <div class="amenities-grid">
+      <div class="amenity-card">
+        <h3>🚗 Parking</h3>
+        <p>On-site parking available for guests.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>🚌 Transfer</h3>
+        <p>Paid airport shuttle for hassle-free travel.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>💼 For Business</h3>
+        <p>Fax and photocopying services available.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>🛁 Bathroom</h3>
+        <p>Complimentary toiletries for your convenience.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>📺 Media</h3>
+        <p>Flat-screen TV and AM/FM alarm clock in every room.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>🧾 Services</h3>
+        <p>24-hour reception, room service, laundry, and more.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>🏡 Room Features</h3>
+        <p>Air conditioning, heating, and soundproof comfort.</p>
+      </div>
+      <div class="amenity-card">
+        <h3>🔥 General Facilities</h3>
+        <p>Allergy-free rooms, fireplace, and fire extinguishers.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="roomnumber1.JPG" alt="Hotel Room 1" loading="lazy">
+        <img src="roomnumber2.JPG" alt="Hotel Room 2" loading="lazy">
+        <img src="roomnumber3.JPG" alt="Hotel Room 3" loading="lazy">
+        <img src="familyroom.JPG" alt="Family Room" loading="lazy">
+        <img src="roomnumber2.JPG" alt="Hotel Room 2" loading="lazy">
+        <img src="roomnumber2.JPG" alt="Hotel Room 2" loading="lazy">
+      </div>
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      
+      let index = 0;
+      let interval;
+
+      const moveSlides = () => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+      };
+
+      const updateCarousel = () => {
+        const slideWidth = track.clientWidth;
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+      };
+
+      const startAutoSlide = () => interval = setInterval(moveSlides, 3000);
+      const stopAutoSlide = () => clearInterval(interval);
+
+      nextBtn.addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+        stopAutoSlide(); startAutoSlide();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateCarousel();
+        stopAutoSlide(); startAutoSlide();
+      });
+
+      window.addEventListener('resize', updateCarousel);
+
+      let startX = 0;
+      track.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+      track.addEventListener("touchend", e => {
+        const endX = e.changedTouches[0].clientX;
+        if (endX < startX - 50) nextBtn.click();
+        if (endX > startX + 50) prevBtn.click();
+      });
+
+      updateCarousel();
+      startAutoSlide();
+    });
+  </script>
 
   <!-- Contact -->
   <section id="contact" class="section">
@@ -372,60 +421,9 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </section>
 
-<!-- Tourist Attractions -->
-<section id="touristAttraction" class="touristsection">
-  <h2>Top Attractions in Banaras</h2>
-  <div class="attraction-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1706186839147-0d708602587b?q=80&w=1170&auto=format&fit=crop" alt="Ganges River" loading="lazy">
-      <div class="card-content">
-        <h3>Ganges River</h3>
-        <p>Take a peaceful boat ride on the holy Ganga and enjoy the sunrise view. (About 0.8 km from Hotel)</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1721884486331-77fc5bec3659?q=80&w=1170&auto=format&fit=crop" alt="Sarnath" loading="lazy">
-      <div class="card-content">
-        <h3>Sarnath</h3>
-        <p>Visit the place where Lord Buddha gave his first sermon. A calm and spiritual spot. (Around 10 km from Hotel)</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1715193678341-31634700f56b?q=80&w=1097&auto=format&fit=crop" alt="Dashashwamedh Ghat" loading="lazy">
-      <div class="card-content">
-        <h3>Dashashwamedh Ghat</h3>
-        <p>Watch the famous Ganga Aarti in the evening with lights and chants by the river. (About 0.9 km from Hotel)</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1671512226229-e05294dd1970?q=80&w=1170&auto=format&fit=crop" alt="Assi Ghat" loading="lazy">
-      <div class="card-content">
-        <h3>Assi Ghat</h3>
-        <p>A peaceful ghat known for yoga, morning vibes, and great food nearby. (Around 1.2 km from Hotel)</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1721975178671-726ee3e22456?q=80&w=1456&auto=format&fit=crop" alt="Ramnagar Fort" loading="lazy">
-      <div class="card-content">
-        <h3>Ramnagar Fort</h3>
-        <p>Explore the old royal fort with vintage cars and a museum. (Around 5 km from Hotel)</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
   <!-- Footer -->
   <footer>
     <p>© 2025 Hotel Devvanshi Villa | All Rights Reserved</p>
   </footer>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    const navLinks = document.querySelectorAll('nav a');
-    toggle.addEventListener('click', () => nav.classList.toggle('active'));
-    navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
-  </script>
 </body>
 </html>
