@@ -1,4 +1,4 @@
-/* ===== RESET & GLOBAL ===== */
+ /* ===== RESET & GLOBAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -200,7 +200,7 @@ nav a:hover {
 
 /* ===== OFFERS SECTION ===== */
 .offers-section {
-  background: var(--diwali-bg); /* Festive Diwali gradient */
+  background: var(--diwali-bg);
   padding: 60px 20px;
   text-align: center;
   animation: fadeInSection 1s ease-out;
@@ -209,7 +209,7 @@ nav a:hover {
 .offers-section h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: var(--diwali-color); /* Festive orange */
+  color: var(--diwali-color);
   font-weight: 700;
 }
 
@@ -249,7 +249,7 @@ nav a:hover {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #e74c3c; /* Red for urgency */
+  background: #e74c3c;
   color: #fff;
   padding: 5px 10px;
   border-radius: 20px;
@@ -525,6 +525,52 @@ nav a:hover {
 .prev { left: 15px; }
 .next { right: 15px; }
 
+/* ===== TOURIST ATTRACTIONS SECTION ===== */
+.touristsection {
+  padding: 60px 20px;
+  background: #fdfdfd;
+}
+
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), var(--shadow-neon);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  color: #00704A;
+  font-size: 1.2em;
+}
+
+.card-content p {
+  color: #555;
+  font-size: 0.95em;
+}
+
 /* ===== BOOKING SECTION ===== */
 .booking-section {
   background: #fafafa;
@@ -628,7 +674,7 @@ footer a:hover {
 @media (max-width: 1024px) {
   .hero h1 { font-size: 2.5rem; }
   .section { padding: 50px 30px; }
-  .room-cards, .amenities-grid, .testimonials-grid, .offers-grid {
+  .room-cards, .amenities-grid, .testimonials-grid, .offers-grid, .attraction-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
@@ -651,12 +697,12 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  .room-card img, .carousel img, .offer-image img {
+  .room-card img, .carousel img, .offer-image img, .card img {
     height: auto;
     max-height: 250px;
   }
 
-  .room-cards, .amenities-grid, .testimonials-grid, .offers-grid {
+  .room-cards, .amenities-grid, .testimonials-grid, .offers-grid, .attraction-grid {
     grid-template-columns: 1fr;
   }
 
@@ -678,6 +724,6 @@ footer a:hover {
   .hero h1 { font-size: 1.8rem; }
   .section h2 { font-size: 1.8rem; }
   .booking-form { padding: 20px; }
-  .carousel img, .offer-image img { height: 200px; }
-  .section-intro, .testimonial-card p, .offer-content p { font-size: 0.9rem; }
+  .carousel img, .offer-image img, .card img { height: 200px; }
+  .section-intro, .testimonial-card p, .offer-content p, .card-content p { font-size: 0.9rem; }
 }
