@@ -29,7 +29,6 @@ body {
   --diwali-color: #d35400; /* Festive orange for Diwali */
   --diwali-bg: linear-gradient(180deg, #fff8e1, #ffebcc); /* Warm Diwali gradient */
 }
-
 /* ===== HEADER ===== */
 header {
   display: flex;
@@ -43,10 +42,32 @@ header {
   z-index: 1000;
 }
 
+/* Logo section */
 header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.7rem;
   font-weight: 700;
   color: var(--text-color);
+}
+
+header .logo .logo-img {
+  width: 70px;      /* increased from 48px */
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+header .logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+header .logo .hotel-name {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 header .logo .highlight {
@@ -54,6 +75,7 @@ header .logo .highlight {
   font-weight: 700;
 }
 
+/* Navigation */
 nav {
   display: flex;
   gap: 20px;
@@ -74,6 +96,46 @@ nav a:hover {
   background: var(--primary-color);
   box-shadow: var(--shadow-neon);
 }
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header .logo .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  header .logo .logo-text {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* ===== MENU TOGGLE (Mobile) ===== */
 .menu-toggle {
