@@ -556,6 +556,13 @@ nav a:hover {
   transition: transform 1s ease-in-out;
 }
 
+.carousel-track img {
+  width: 200px;       /* Set your desired fixed width */
+  height: 150px;      /* Set your desired fixed height */
+  object-fit: cover;  /* Ensures image covers the frame without stretching */
+}
+
+
 .carousel img {
   width: 100%;
   flex: 0 0 100%;
