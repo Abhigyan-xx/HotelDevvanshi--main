@@ -177,6 +177,116 @@ nav a:hover {
 }
 
 /* ===== HERO SECTION ===== */
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('images/your-hero-image.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Text container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  color: #ffb300; /* Gold tone for brand feel */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* CTA Button */
+.btn-book {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffb300, #ff9000);
+  color: #fff;
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(255, 153, 0, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse 2.8s infinite;
+}
+
+  /* .hero .cta-note {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.9;
+    font-weight: 400;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  } */
+
+
+.btn-book:hover {
+  background: linear-gradient(135deg, #ff9000, #ffb300);
+  transform: scale(1.07);
+  box-shadow: 0 8px 30px rgba(255, 153, 0, 0.6);
+}
+
+/* Gentle pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 25px rgba(255, 153, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 153, 0, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn-book {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+
 .hero {
   position: relative;
   background: url('backgroundbanner.jpg') no-repeat center center/cover;
