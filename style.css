@@ -240,14 +240,14 @@ nav a:hover {
   animation: pulse 2.8s infinite;
 }
 
-  /* .hero .cta-note {
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #fff;
-    opacity: 0.9;
-    font-weight: 400;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  } */
+/* .hero .cta-note {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+} */
 
 
 .btn-book:hover {
@@ -257,7 +257,7 @@ nav a:hover {
 }
 
 /* Gentle pulse animation */
-@keyframes pulse {
+@keyframes pulse {  
   0% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.4);
@@ -299,10 +299,10 @@ nav a:hover {
   color: #fff;
   padding: 0 20px;
   border-radius: 12px;
-  animation: fadeInSection 1s ease-out;
 }
 
 .hero::after {
+  display: none;
   content: "";
   position: absolute;
   inset: 0;
@@ -469,6 +469,37 @@ nav a:hover {
   gap: 25px;
   justify-items: center;
 }
+
+/* Make all room cards the same height and align button at bottom */
+.room-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* spacing between cards */
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column; /* stack image + content */
+  flex: 1 1 300px; /* responsive card width */
+  min-height: 450px; /* adjust to match your tallest card */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.room-card .room-content {
+  display: flex;
+  flex-direction: column; /* stack text + button */
+  padding: 15px;
+}
+
+.room-card .book-now-btn,
+.room-card a.btn.glow-btn {
+  margin-top: auto; /* push button to the bottom */
+  align-self: center; /* center button horizontally */
+}
+
 
 .room-card {
   background: #fff;
